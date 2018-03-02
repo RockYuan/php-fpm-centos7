@@ -35,6 +35,7 @@ RUN sed -i "s/;date.timezone =.*/date.timezone = Asia\/Hong_Kong/" /etc/php.ini 
     sed -i "s/php_admin_flag\[log_errors\] = .*/;php_admin_flag[log_errors] =/" /etc/php-fpm.d/www.conf && \
     sed -i "s/php_admin_value\[error_log\] =.*/;php_admin_value[error_log] =/" /etc/php-fpm.d/www.conf && \
     sed -i "s/php_admin_value\[error_log\] =.*/;php_admin_value[error_log] =/" /etc/php-fpm.d/www.conf && \
+    sed -i '/^php_value[\soap.wsdl_cache_dir\]/c;php_value[soap.wsdl_cache_dir]' /etc/php-fpm.d/www.conf && \
     echo "php_admin_value[display_errors] = 'stderr'" >> /etc/php-fpm.d/www.conf
 
 # DATA VOLUMES
