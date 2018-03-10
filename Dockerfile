@@ -21,6 +21,7 @@ RUN yum -y install http://rpms.famillecollet.com/enterprise/remi-release-7.rpm &
         php-xml \
         php-pecl-mongodb \
         php-pecl-redis \
+        php56w-bcmath \
         php-pecl-swoole && \
     yum clean all
 
